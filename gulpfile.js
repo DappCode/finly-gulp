@@ -65,9 +65,9 @@ return gulp.src('app/*.html')
 gulp.task('images', function(){
     return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
     // Caching images that ran through imagemin
-    .pipe(cache(imagemin({
+    .pipe(imagemin({
         interlaced: true  // unntuk Membuat GIFs
-      })))
+      }))
     .pipe(gulp.dest('dist/images'))
 });
 
